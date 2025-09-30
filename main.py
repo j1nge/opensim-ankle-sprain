@@ -14,7 +14,6 @@ def build_model():
     model.addBody(talus)
     model.addBody(calc)
 
-    # ✅ Weld tibia to ground (fixes tibia in place, no warning anymore)
     tibia_joint = osim.WeldJoint("tibia_ground",
                                  ground, osim.Vec3(0), osim.Vec3(0),
                                  tibia,  osim.Vec3(0), osim.Vec3(0))
